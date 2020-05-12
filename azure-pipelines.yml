@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
+    Python38:
+      python.version: '3.8.2'
     Python35:
       python.version: '3.5'
     Python36:
@@ -23,7 +23,7 @@ steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
-    failOnStandardError: 'true'
+    
   displayName: 'Use Python $(python.version)'
 
 - script: |
